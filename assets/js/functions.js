@@ -3,6 +3,10 @@ nav();
 const slides = document.querySelectorAll('#full-slide .banner > li');
 setfullSlide();
 
+
+
+// ----- NAV -----
+
 function nav(){	
 	$('.nav-toggle').click(function(){
 		$('.nav').toggleClass('open');
@@ -21,14 +25,11 @@ function setfullSlide() {
 	next.addEventListener('click', () => {
 		fullSlideNext(1)
 	});
-
-	console.log(slides);
 }
 
 function fullSlideNext(increment) {
-	let activeSlide = getFullSlideActiveSlide();
+	let activeSlide = getActiveFullSlide();
 	//désactiver la slide active
-	console.log(activeSlide);
 	slides[activeSlide].classList.toggle('active');
 	
 	activeSlide += increment;
@@ -40,11 +41,10 @@ function fullSlideNext(increment) {
 	}
 	
 	//activer la nouvelle slide
-	console.log(activeSlide);
 	slides[activeSlide].classList.toggle('active');
 }
 
-function getFullSlideActiveSlide() {
+function getActiveFullSlide() {
 	let activeSlide = null;
 	slides.forEach((slide, i) => {
 		if (slide.classList.contains('active')) {
