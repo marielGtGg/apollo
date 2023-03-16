@@ -126,10 +126,10 @@
           Aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
         </p>
       </div>
-      <form>
-        <input type="email" placeholder="Votre courriel">
-        <input type="text" placeholder="Sujet">
-        <textarea placeholder="Message"></textarea>
+      <form action="phpMailer.php" method="POST" enctype="multipart/form-data">
+        <input type="email" name="email" placeholder="Votre courriel">
+        <input type="text" name="subject" placeholder="Sujet">
+        <textarea name="body" placeholder="Message"></textarea>
         <input type="submit" value="Envoyer">
       </form>
     </div>

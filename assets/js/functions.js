@@ -6,7 +6,6 @@ const next = document.querySelector('#full-slide .next');
 
 new FullSlide(slides, prev, next);
 
-
 // ----- NAV -----
 
 function nav(){	
@@ -15,4 +14,8 @@ function nav(){
 	});
 }
 
+//----- CONTACT FORM -----
 
+function setContactForm() {
+
+}
