@@ -39,6 +39,6 @@ try {
     $mail->send();
     header('location: /index.php?mailsucceed=true#contact');
 } catch (Exception $e) {
-    //header('location: /index.php?mailsucceed=false#contact');
-    echo "Le message n'a pas pu être envoyé. Erreur : {$mail->ErrorInfo}";
+    header('location: /index.php?mailsucceed=false#contact');
+    //echo "Le message n'a pas pu être envoyé. Erreur : {$mail->ErrorInfo}";
 }

@@ -1127,7 +1127,9 @@ svg path {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     width: 40%;
-    opacity: 0
+    opacity: 0;
+    left: 30%;
+    transition: all 1s ease;
 }
 
 @media (max-width: 900px) {
@@ -1140,22 +1142,23 @@ svg path {
     width: 100%
 }
 
-#three-slide .wrapper .slider .back {
+#three-slide .wrapper .slider li.back {
     left: 0;
-    opacity: 1
+    opacity: 1;
 }
 
-#three-slide .wrapper .slider .current {
+#three-slide .wrapper .slider li.current {
     left: 50%;
     -webkit-transform: translate(-50%, -50%) scale(1.3);
     transform: translate(-50%, -50%) scale(1.3);
     opacity: 1;
-    z-index: 10
+    z-index: 10;
 }
 
-#three-slide .wrapper .slider .front {
+#three-slide .wrapper .slider li.front {
+    left: unset;
     right: 0;
-    opacity: 1
+    opacity: 1;
 }
 
 @media (max-width: 767px) {

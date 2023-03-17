@@ -154,6 +154,7 @@
   </section>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" defer></script>
   <script src="assets/js/FullSlide.js" defer></script>
+  <script src="assets/js/ThreeSlide.js" defer></script>
   <script src="assets/js/functions.js" defer></script>
 </body>
 

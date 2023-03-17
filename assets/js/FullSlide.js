@@ -5,15 +5,15 @@ class FullSlide {
         this.activeSlide = 0;
 
         prev.addEventListener('click', () => {
-            this.fullSlideNext(-1)
+            this.next(-1)
         });
 
         next.addEventListener('click', () => {
-            this.fullSlideNext(1)
+            this.next(1)
         });
     }  
     
-    fullSlideNext(increment) {
+    next(increment) {
         //désactiver la slide active
         this.slides[this.activeSlide].classList.toggle('active');
         
