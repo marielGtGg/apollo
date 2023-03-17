@@ -8,6 +8,12 @@ use PHPMailer\PHPMailer\Exception;
 //Load Composer's autoloader
 require 'vendor/autoload.php';
 
+if (empty($_POST['email'])) {
+    header('Location: /index.php?mailerror=email#contact');
+} elseif (empty($_POST['body'])) {
+    header('Location: /index.php?mailerror=body#contact');
+}
+
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
@@ -31,7 +37,8 @@ try {
     $mail->Body    = $_POST['body'];
 
     $mail->send();
-    echo 'Merci! Votre message a bien été envoyé.';
+    header('location: /index.php?mailsucceed=true#contact');
 } catch (Exception $e) {
+    //header('location: /index.php?mailsucceed=false#contact');
     echo "Le message n'a pas pu être envoyé. Erreur : {$mail->ErrorInfo}";
 }

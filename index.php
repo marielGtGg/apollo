@@ -26,7 +26,7 @@
       <ul class="nav">
         <li><a href="#about">About</a></li>
         <li><a href="#full-slide">Work</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="contact">Contact</a></li>
       </ul>
     </header>
     <div class="wrapper">
@@ -131,6 +131,23 @@
         <input type="text" name="subject" placeholder="Sujet">
         <textarea name="body" placeholder="Message"></textarea>
         <input type="submit" value="Envoyer">
+        <p class="message">
+        <?php
+        if (isset($_GET['mailsucceed'])) {
+          if ($_GET['mailsucceed'] === 'true') {
+            echo 'Merci! On a bien reçu votre message.';
+          } elseif ($_GET['mailsucceed'] === 'false') {
+            echo 'Hum, quelque chose ne va pas. Veuillez réessayer.';
+          }
+        } elseif (isset($_GET['mailerror'])) {
+          if ($_GET['mailerror'] === 'email') {
+            echo 'Oups! veuillez préciser votre courriel.';
+          } elseif ($_GET['mailerror'] === 'body') {
+            echo 'Oups! Il manque le contenu de votre courriel.';
+          }
+        }
+        ?>
+        </p>
       </form>
     </div>
     <p class="copyright">&copy; Apollo Project</p>

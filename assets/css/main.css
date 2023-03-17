@@ -1384,6 +1384,12 @@ svg path {
     background-color: #111
 }
 
+#contact .wrapper form .message {
+    margin-top: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
 @media (max-width: 640px) {
 
     #contact .wrapper form input[type="email"],
