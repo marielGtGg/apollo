@@ -18,8 +18,3 @@ function nav(){
 	});
 }
 
-//----- Three-slide -----
-
-function setThreeSlide() {
-
-}
