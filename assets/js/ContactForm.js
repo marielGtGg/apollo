@@ -16,7 +16,7 @@ class ContactForm {
     
     submitForm() {
         if (!this.email.value) {
-            return this.message.textContent = 'Oups! veuillez préciser votre courriel.';
+            return this.message.textContent = 'Oups! Veuillez préciser votre courriel.';
         } else if (!this.body.value) {
             return this.message.textContent = 'Oups! Il manque le contenu de votre courriel.';
         } 

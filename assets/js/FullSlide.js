@@ -15,7 +15,7 @@ class FullSlide {
     
     next(increment) {
         //désactiver la slide active
-        this.slides[this.activeSlide].classList.toggle('active');
+        this.slides[this.activeSlide].classList.remove('active');
         
         this.activeSlide += increment;
 
@@ -28,7 +28,7 @@ class FullSlide {
         }
         
         //activer la nouvelle slide
-        this.slides[this.activeSlide].classList.toggle('active');
+        this.slides[this.activeSlide].classList.add('active');
     }
 
 }

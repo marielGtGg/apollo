@@ -4,7 +4,7 @@ class ThreeSlide {
         this.slides = slides;
         
         this.slides.forEach((slide, i) => {
-            slide.addEventListener('click', (event) => {
+            slide.addEventListener('click', () => {
                 this.next(i);
             })
         });
