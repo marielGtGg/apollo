@@ -1387,7 +1387,7 @@ svg path {
     background-color: #111
 }
 
-#contact .wrapper form .message {
+#contact .wrapper form #contact-message {
     margin-top: 1rem;
     text-align: center;
     width: 100%;

@@ -26,7 +26,7 @@
       <ul class="nav">
         <li><a href="#about">About</a></li>
         <li><a href="#full-slide">Work</a></li>
-        <li><a href="contact">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </header>
     <div class="wrapper">
@@ -126,28 +126,13 @@
           Aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
         </p>
       </div>
-      <form action="phpMailer.php" method="POST" enctype="multipart/form-data">
-        <input type="email" name="email" placeholder="Votre courriel">
-        <input type="text" name="subject" placeholder="Sujet">
-        <textarea name="body" placeholder="Message"></textarea>
-        <input type="submit" value="Envoyer">
-        <p class="message">
-        <?php
-        if (isset($_GET['mailsucceed'])) {
-          if ($_GET['mailsucceed'] === 'true') {
-            echo 'Merci! On a bien reçu votre message.';
-          } elseif ($_GET['mailsucceed'] === 'false') {
-            echo 'Hum, quelque chose ne va pas. Veuillez réessayer.';
-          }
-        } elseif (isset($_GET['mailerror'])) {
-          if ($_GET['mailerror'] === 'email') {
-            echo 'Oups! veuillez préciser votre courriel.';
-          } elseif ($_GET['mailerror'] === 'body') {
-            echo 'Oups! Il manque le contenu de votre courriel.';
-          }
-        }
-        ?>
-        </p>
+      <form>
+        <input type="email" id="contact-email" name="email" placeholder="Votre courriel">
+        <input type="text" id="contact-subject" name="subject" placeholder="Sujet">
+        <textarea id="contact-body" name="body" placeholder="Message"></textarea>
+        <!-- <input id="contact-submit-btn" type="submit" value="Envoyer"> -->
+        <button id="contact-submit-btn">Envoyer</button>
+        <p id="contact-message"></p>
       </form>
     </div>
     <p class="copyright">&copy; Apollo Project</p>
@@ -155,6 +140,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" defer></script>
   <script src="assets/js/FullSlide.js" defer></script>
   <script src="assets/js/ThreeSlide.js" defer></script>
+  <script src="assets/js/ContactForm.js" defer></script>
   <script src="assets/js/functions.js" defer></script>
 </body>
 
